@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon">
+    <title>SyncUp - Reset Password</title>
+    <meta name="robots" content="noindex">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8K7EFT5B9V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8K7EFT5B9V');
+    </script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8K7EFT5B9V"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8K7EFT5B9V');
+</script>
+<body>
+    <section id="app">
+        <nav>
+            <span class="leftSide">
+                <a href="#">
+                    <b>Sync Up</b>
+                </a>
+            </span>
+
+            <span class="rightSide">
+                <a v-for="header in navHeaders" :href="header.link">{{header.title}}</a>
+            </span>
+        </nav>
+
+
+        <section class="header">
+            <section class="rightSide">
+                <h1>Password</h1>
+            </section>
+
+            <section class="leftSide">
+                <div class="inputs">
+                    <input type="password" placeholder="New Password" v-model="userData.newPassword">
+                    <div class="error" v-if="errorData.isError"><b>{{errorData.message}}</b></div>
+                </div>
+                <button @click="triggerResetPassword">Update Password</button>
+            </section>
+        </section>
+
+    </section>
+    <script src="vue.min.js"></script>
+    <script src="../util.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
